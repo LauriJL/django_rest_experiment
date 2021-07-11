@@ -1,7 +1,7 @@
 from rest_framework import serializers
 from .models import Catalog
 
-class CatalogSerializer(serializers.ModelSerializer):
+class CatalogSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Catalog
-        fields = ('id','name','material','price')
+        fields = ('id','url','name','material','price')
